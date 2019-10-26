@@ -1,4 +1,4 @@
-package com.rosisoft.googleweather.app.controller;
+package com.rosisoft.googleweathertemplate.app.controller;
 
 
 
@@ -140,9 +140,9 @@ public class MainController implements Initializable{
   
        try {
            
-           String apiKey="******";
+           String apiKey="***";
            this.dataService = DataServiceFactory.getWeatherService(service.OPEN_WEATHER_MAP,apiKey);
-           WeatherForecastDaily data = dataService.GET_16_DAY_WEATHER_FORECAST_DATA_BY_CITY_NAME("Toronto");
+           WeatherForecastDaily data = dataService.GET_16_DAY_WEATHER_FORECAST_DATA_BY_CITY_NAME("Constantine");
           
             text_City.setText(data.getCity().getName()+" ,"+data.getCity().getCountry());
             text_Precipitation.setText(data.getList()[0].getPressure()+" hPa");
