@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="632.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rosisoft.googleweathertemplate.app.controller.MainController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="424.0" prefWidth="600.0" style="-fx-background-color: #fff; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="text_City" prefHeight="28.0" prefWidth="600.0" text="City Name" textFill="#878787">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_Date" layoutY="29.0" prefHeight="21.0" prefWidth="300.0" text="EEE, dd MMM" textFill="#878787">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font></Label>
+            <ImageView fx:id="img_Weather" fitHeight="64.0" fitWidth="64.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="text_Temperature" layoutX="70.0" layoutY="92.0" prefHeight="90.0" prefWidth="150.0" text="00" textFill="#222222">
+               <font>
+                  <Font name="Arial" size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="text_celsius" disable="true" layoutX="177.0" layoutY="83.0" onMousePressed="#onMousePressedCelsius" text="°C">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="text_WeatherDescription" layoutY="50.0" text="Weather descriptions" textFill="#878787">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Region layoutY="72.0" prefHeight="20.0" prefWidth="600.0" />
+            <Label fx:id="text_fahrenheit" layoutX="207.0" layoutY="83.0" onMousePressed="#onMousePressedFahrenheit" text="°F" textFill="#1a0dab">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Separator layoutX="200.0" layoutY="84.0" orientation="VERTICAL" prefHeight="17.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_toDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_toDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_toDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_toDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theFirstDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theFirstDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theFirstDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theFirstDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theSecondDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theSecondDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theSecondDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theSecondDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theThirdDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theThirdDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theThirdDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theThirdDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theFourthDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theFourthDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theFourthDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theFourthDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theFifthDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theFifthDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theFifthDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theFifthDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theSixthDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theSixthDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theSixthDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theSixthDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="92.0" prefWidth="75.0">
+                     <children>
+                        <ImageView fx:id="img_theSeventhDay" fitHeight="48.0" fitWidth="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" x="9.5" />
+                        <Label fx:id="text_theSeventhDay" alignment="CENTER" prefHeight="22.0" prefWidth="73.0" text="E" textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutY="70.0" prefHeight="15.0" prefWidth="73.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="txt_tempMax_theSeventhDay" text="0" textFill="#878787">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_tempMin_theSeventhDay" text="0" textFill="#bababa">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER" layoutX="242.0" layoutY="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="110.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="258.0" text="Precipitation :" textFill="#878787">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="258.0" text="Wind :" textFill="#878787" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_Precipitation" prefHeight="22.0" prefWidth="258.0" text="00 %" textFill="#bababa" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_Wind" prefHeight="22.0" prefWidth="182.0" text="00 Km/h" textFill="#bababa" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="258.0" text="Humidity :" textFill="#878787" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_Humidity" prefHeight="22.0" prefWidth="258.0" text="00 %" textFill="#bababa" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Separator layoutX="32.0" layoutY="72.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" />
+            <Separator layoutX="-7.0" layoutY="194.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="text_Time" layoutX="525.0" layoutY="19.0" prefHeight="21.0" prefWidth="75.0" text="hh:mm a" textFill="#878787" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="19.0">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="579.0" layoutY="-14.0" onMousePressed="#onMousePressedClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icon_shutdown.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="16.0" right="16.0" top="20.0" />
+   </padding>
+</AnchorPane>
