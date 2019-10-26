@@ -30,4 +30,4 @@ build.xml
 manifest.mf
 /build/
 /dist/
-#lib#
+/lib/
